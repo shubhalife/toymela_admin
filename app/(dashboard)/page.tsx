@@ -6,7 +6,7 @@ import {
   getTotalCustomers,
   getTotalSales,
 } from "@/lib/actions/actions";
-import { CircleDollarSign, ShoppingBag, UserRound } from "lucide-react";
+import { IndianRupee, ShoppingBag, UserRound } from "lucide-react";
 
 export default async function Home() {
   const totalRevenue = await getTotalSales().then((data) => data.totalRevenue);
@@ -24,10 +24,10 @@ export default async function Home() {
         <Card>
           <CardHeader className="flex flex-row justify-between items-center">
             <CardTitle>Total Revenue</CardTitle>
-            <CircleDollarSign className="max-sm:hidden" />
+            <IndianRupee className="max-sm:hidden" />
           </CardHeader>
           <CardContent>
-            <p className="text-body-bold">$ {totalRevenue}</p>
+            <p className="text-body-bold">₹ {totalRevenue}</p>
           </CardContent>
         </Card>
 
@@ -54,7 +54,7 @@ export default async function Home() {
 
       <Card className="mt-10">
         <CardHeader>
-          <CardTitle>Sales Chart ($)</CardTitle>
+          <CardTitle>Sales Chart (₹)</CardTitle>
         </CardHeader>
         <CardContent>
           <SalesChart data={graphData} />

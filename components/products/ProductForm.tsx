@@ -199,7 +199,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
               name="price"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Price ($)</FormLabel>
+                  <FormLabel>Price (₹)</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
@@ -217,7 +217,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
               name="expense"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Expense ($)</FormLabel>
+                  <FormLabel>Expense (₹)</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
@@ -329,10 +329,10 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
               name="sizes"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Sizes</FormLabel>
+                  <FormLabel>Material</FormLabel>
                   <FormControl>
                     <MultiText
-                      placeholder="Sizes"
+                      placeholder="Material"
                       value={field.value}
                       onChange={(size) =>
                         field.onChange([...field.value, size])
